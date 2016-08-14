@@ -1,0 +1,2635 @@
+//===== Hercules Script ======================================= 
+//= Episode 14.3 NPCs
+//===== By: =================================================== 
+//= Racaae
+//= WoonRO
+//===== Version: ============================================== 
+//= 1.1
+//===== Compatability: ======================================== 
+//= Hercules
+//===== Desc: ================================================= 
+//= 1.1 NPCs comuns e defensores da Bacia Flamejante e Eclage.
+//= 1.2 Translated and Added missing NPCs by WoonRO
+//============================================================= 
+
+moro_vol,119,106,3	script	Instrutor Jakken#fb	4_M_YOUNGKNIGHT,10,10,{
+	mes "[Instrutor Jakken]";
+	mes "When I volunteered for the Ash Vacum Expedition I knew this day would come.";
+	next;
+	mes "[Instrutor Jakken]";
+	mes "I'm ready.";
+	mes "I will fight to the death for the peace of Midgard.";
+	next;
+	mes "[Instrutor Jakken]";
+	mes "But I'm nervous all the same.";
+	mes "I really need to improve my emotional control if I don't want to be scared of anyone.";
+	close;
+
+OnTouch:
+	if (.Talk)
+		end;
+	++.Talk;
+	showscript "Jakken: Soldiers, we are from different nations, but we are gathered here with one goal!", getnpcid(0);
+	sleep 3500;
+	showscript "Jakken: Let's show the enemy the power of our union.", getnpcid(0);
+	sleep 2000;
+	showscript "Jakken: Start the march of glory!", getnpcid(0);
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb1::OnTalk1";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb2::OnTalk2";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb3::OnTalk3";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb4::OnTalk4";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb5::OnTalk5";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb6::OnTalk6";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb7::OnTalk7";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb8::OnTalk8";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb9::OnTalk9";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb10::OnTalk10";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb11::OnTalk11";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb12::OnTalk12";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb1::OnTalk13";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb2::OnTalk14";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb3::OnTalk15";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb4::OnTalk16";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb5::OnTalk17";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb6::OnTalk18";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb7::OnTalk19";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb8::OnTalk20";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb9::OnTalk21";
+	sleep 1500;
+	donpcevent "Alliance Soldier#fb10::OnTalk22";
+	sleep 500;
+	donpcevent "Alliance Soldier#fb11::OnTalk23";
+	sleep 100;
+	donpcevent "Alliance Soldier#fb12::OnTalk24";
+	sleep 30000;
+	--.Talk;
+	end;
+}
+
+moro_vol,117,104,1	script	Alliance Soldier#fb1	4_M_MOC_SOLDIER,{
+	end;
+	
+OnTalk1:
+	showscript "At dawn~", getnpcid(0);
+	end;
+OnTalk2:
+	showscript "For my dream!", getnpcid(0);
+	end;
+OnTalk3:
+	showscript "For my house~", getnpcid(0);
+	end;
+OnTalk4:
+	showscript "Got my jacket~", getnpcid(0);
+	end;
+OnTalk5:
+	showscript "Got my helmet~", getnpcid(0);
+	end;
+OnTalk6:
+	showscript "Ready for a new day~", getnpcid(0);
+	end;
+OnTalk7:
+	showscript "I'm ready~", getnpcid(0);
+	end;
+OnTalk8:
+	showscript "Got my sword~", getnpcid(0);
+	end;
+OnTalk9:
+	showscript "We ride at dawn~", getnpcid(0);
+	end;
+OnTalk10:
+OnTalk11:
+	showscript "I look forward to this~", getnpcid(0);
+	end;
+OnTalk12:
+	showscript "I look forward to it as well~", getnpcid(0);
+	end;
+OnTalk13:
+	showscript "The water is pure~", getnpcid(0);
+	end;
+OnTalk14:
+	showscript "The mountains are green~", getnpcid(0);
+	end;
+OnTalk15:
+	showscript "For my home~", getnpcid(0);
+	end;
+OnTalk16:
+OnTalk19:
+	showscript "I'll never quit~", getnpcid(0);
+	end;
+OnTalk17:
+OnTalk20:
+	showscript "Until I defeat them~";
+	end;
+OnTalk18:
+OnTalk21:
+	showscript "The Demon God!~", getnpcid(0);
+	end;
+OnTalk22:
+	showscript "Waaaah-!", getnpcid(0);
+	end;
+OnTalk23:
+OnTalk24:
+	showscript "Haaaaah-!", getnpcid(0);
+	end;
+}
+moro_vol,119,104,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb2	4_M_EIN_SOLDIER
+moro_vol,121,104,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb3	4_M_RASWORD
+moro_vol,117,102,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb4	4_M_MOC_SOLDIER
+moro_vol,119,102,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb5	4_M_EIN_SOLDIER
+moro_vol,121,102,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb6	4_M_RASWORD
+moro_vol,117,100,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb7	4_M_MOC_SOLDIER
+moro_vol,119,100,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb8	4_M_LGTGUARD
+moro_vol,121,100,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb9	4_DST_SOLDIER
+moro_vol,117,98,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb10	4_M_MOC_SOLDIER
+moro_vol,119,98,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb11	4_M_LGTGUARD
+moro_vol,121,98,1	duplicate(Alliance Soldier#fb1)	Alliance Soldier#fb12	4_DST_SOLDIER
+
+
+moro_vol,106,111,5	script	Commander Laphine#fb	4_M_FAIRYSOLDIER,10,10,{
+	mes "[Commander Laphine]";
+	mes "We are in the reunification process for the battle to come.";
+	mes "Do not bother us.";
+	close;
+
+OnTouch:
+	if (.Talk)
+		end;
+	++.Talk;
+	npctalk "WE ARE!";
+	sleep 1000;
+	donpcevent "Laphine Fighters#fb1::OnTalk1";
+	sleep 100;
+	donpcevent "Laphine Fighters#fb2::OnTalk1";
+	donpcevent "Laphine Fighters#fb3::OnTalk1";
+	sleep 1000;
+	donpcevent "Laphine Fighters#fb4::OnTalk1";
+	sleep 100;
+	donpcevent "Laphine Fighters#fb5::OnTalk1";
+	donpcevent "Laphine Fighters#fb6::OnTalk1";
+	sleep 1000;
+	donpcevent "Laphine Fighters#fb7::OnTalk1";
+	sleep 100;
+	donpcevent "Laphine Fighters#fb8::OnTalk1";
+	donpcevent "Laphine Fighters#fb9::OnTalk1";
+	sleep 1500;
+	npctalk "We fight against evil!";
+	sleep 1500;
+	donpcevent "Laphine Fighters#fb1::OnTalk2";
+	sleep 300;
+	donpcevent "Laphine Fighters#fb2::OnTalk2";
+	donpcevent "Laphine Fighters#fb3::OnTalk2";
+	donpcevent "Laphine Fighters#fb4::OnTalk2";
+	donpcevent "Laphine Fighters#fb5::OnTalk2";
+	donpcevent "Laphine Fighters#fb6::OnTalk2";
+	donpcevent "Laphine Fighters#fb7::OnTalk2";
+	donpcevent "Laphine Fighters#fb8::OnTalk2";
+	donpcevent "Laphine Fighters#fb9::OnTalk2";
+	sleep 30000;
+	--.Talk;
+	end;
+}
+
+moro_vol,104,109,7	script	Laphine Fighters#fb1	4_M_FAIRYSOLDIER,{
+	end;
+	
+OnTalk1:
+	switch(atoi(replacestr(strnpcinfo(2),"fb",""))) {
+		case 1:
+		case 2:
+		case 3:
+			showscript "WE ARE!", getnpcid(0);
+			end;
+		case 4:
+		case 5:
+		case 6:
+			showscript "THE PROUD!", getnpcid(0);
+			end;
+		case 7:
+		case 8:
+		case 9:
+			showscript "LAPHINES!", getnpcid(0);
+			end;
+	}
+	
+OnTalk2:
+	showscript "Against evil!", getnpcid(0);
+	end;
+}
+
+moro_vol,106,109,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb2	4_M_FAIRYSOLDIER
+moro_vol,108,109,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb3	4_M_FAIRYSOLDIER
+moro_vol,104,107,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb4	4_M_FAIRYSOLDIER
+moro_vol,106,107,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb5	4_M_FAIRYSOLDIER
+moro_vol,108,107,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb6	4_M_FAIRYSOLDIER
+moro_vol,104,105,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb7	4_M_FAIRYSOLDIER
+moro_vol,106,105,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb8	4_M_FAIRYSOLDIER
+moro_vol,108,105,7	duplicate(Laphine Fighters#fb1)	Laphine Fighters#fb9	4_M_FAIRYSOLDIER
+
+moro_vol,101,102,5	script	Laphine Enchantress#fb1	4_F_FAIRY2,{
+	++.wait;
+	if (.wait > 3) {
+		if (.wait < 63)
+			.wait = 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"... Everybody Freeze! Freeze!",
+				"(Exhailing through the mouth)",
+				"The Guardian is watching. I can not make any mistakes.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (.wait > 0)
+		--.wait;
+	if (.wait > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,103,102,7	script	Laphine Enchantress#fb2	4_F_MORAFINE1,{
+	++.wait;
+	if (.wait > 3) {
+		if (.wait < 63)
+			.wait = 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"Meh.",
+				"The Guardian is watching. I can not make any mistakes.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (.wait > 0)
+		--.wait;
+	if (.wait > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,105,102,7	script	Laphine Enchanter#fb3	4_M_FAIRYKID5,{
+	++.wait;
+	if (.wait > 3) {
+		if (.wait < 63)
+			.wait = 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"How long do we have to wait?",
+				"These humans behind us are bothering me.",
+				"I should not have volunteered to come here. I miss my wife...",
+				"*Sigh*";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (.wait > 0)
+		--.wait;
+	if (.wait > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,107,102,7	script	Laphine Enchantress#fb4	4_F_FAIRYKID5,{
+	++.wait;
+	if (.wait > 3) {
+		if (.wait < 63)
+			.wait = 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"I'm nervous",
+				"I'm trying to remember to shoot when I catch sight of the enemy.",
+				"The Saphas are not enemies ... The Saphas are not enemies ... Argh , but I want to finish them !";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (.wait > 0)
+		--.wait;
+	if (.wait > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,109,102,7	script	Laphine Enchanter#fb5	4_M_FAIRYKID5,{
+	++.wait;
+	if (.wait > 3) {
+		if (.wait < 63)
+			.wait = 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"I'm nervous",
+				"I'm trying to remember to shoot when I catch sight of the enemy.",
+				"I like tension. Let me in it to the extreme!";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (.wait > 0)
+		--.wait;
+	if (.wait > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,104,86,3	script	Ryosen#fb	4_M_ALCHE_A,{
+	mes "[Ryosen]";
+	mes "Of course I 'm nervous. You do not need to ask me that.";
+	mes "Because Administrative Officer put me in charge of the riders I do not know.";
+	next;
+	mes "[Ryosen]";
+	mes "They are not knights in training or apprentice riders. They are experienced riders.";
+	mes "Oh, I am very inexperienced and weak to do anything with them.";
+	next;
+	mes "[Ryosen]";
+	mes "At least my safety is guaranteed while the three riders are with me.";
+	mes "I hope.";
+	close;
+}
+
+moro_vol,101,87,5	script	Midgard Knight#f1	4_M_KNIGHT_BLACK,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"I really need to let off some steam",
+				"...",
+				"Grr...",
+				"Very quiet.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,101,85,5	script	Midgard Knight#f2	4_M_KNIGHT_GOLD,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"*Sigh*",
+				"I'm here to protect important people.",
+				"So far, so good.",
+				"I really hope I can complete my mission.",
+				"Ryosen, stop panicking-- Fear spreads like wild fire.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,103,83,1	script	Midgard Knight#f3	4_M_KNIGHT_SILVER,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"Hmm...",
+				"Ryosen, no one will bite you. Do not be so afraid.",
+				"Fighting the Demon God is like the dream of every rider turned reality.",
+				"Tension on the battlefield always excites me.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,110,83,3	script	Hue #fb	4_M_LGTGUARD,{
+	mes "[Hue]";
+	mes "We're finally here.";
+	mes "At first, I could not believe all those rumors about the hideout and fortress of the Demon God.";
+	next;
+	mes "[Hue]";
+	mes "As things go, I expect not to return to the mainland soon.";
+	next;
+	mes "[Hue]";
+	mes "Wow, I'm tired of these guys.";
+	mes "I better find the Demon God fast.";
+	next;
+	mes "[Hue]";
+	mes "Have I thought of being defeated?";
+	mes "Yeah, but I try not to think about it.";
+	mes "I'll never win if I allow my self to believe that I'll miss.";
+	next;
+	mes "[Hue]";
+	mes "We Schwartzwaldians are born to win.";
+	close;
+}
+
+moro_vol,108,81,7	script	Schwartzwald Elite#1	4_M_EIN_SOLDIER,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"And I thought Einbroch had a bad air, this is no better.",
+				"For the glory of Schwartzwald !",
+				"We will win!";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,111,80,1	script	Schwartzwald Elite#2	4_M_EIN_SOLDIER,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"For Midgard!",
+				"For the glory of Schwartzwald !",
+				"We will win!";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,113,81,3	script	Schwartzwald Elite#3	4_M_EIN_SOLDIER,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"*Sigh*",
+				"I wanted to train more.",
+				"Which would you prefer : Fighting the Demon God or keep watch on Einbroch.",
+				"However, we will win.",
+				"My eyes were suddenly clouded ... I better keep your head up ... * Inhale *";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,118,86,5	script	 Hansenne#fb	4_M_RACHMAN1,{
+	mes "[Hansenne]";
+	mes "This place is much more exciting than I imagined!";
+	mes "Anyway where's Demon God?";
+	next;
+	mes "[Hansenne]";
+	mes "I can't see any signs of him.";
+	mes "Muwahahah!";
+	close;
+}
+
+moro_vol,116,84,7	script	Templar#fb1	4_M_TRAINEE,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"Everything is Her will.",
+				"I've never seen so many different heretics groups congregating in one place.",
+				"May the Goddess bless you.",
+				"Having to live with heretics ...";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,118,83,7	script	Templar#fb2	4_F_MASK,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"...",
+				"Everything is Her will.",
+				"I've never seen so many different heretics groups congregating in one place.";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,121,84,1	script	Templar#fb3	4_F_TRAINEE,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	setarray .@message$,
+				"We will win!",
+				"Everything is Her will.",
+				"May the Goddess bless you.",
+				"Having to live with heretics ...";
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+}
+
+moro_vol,84,201,5	script	Faithful Believer#1	4_M_BELIEVER02,{
+	mes "[Faithful Believer]";
+	switch(atoi(strnpcinfo(2))) {
+		case 1:
+		case 3:
+		case 4:
+		case 7:
+		case 8:
+		case 11:
+			mes "Destruction is blessing!";
+			mes "Destruction is blessing!";
+			close;
+		case 2:
+		case 6:
+		case 9:
+		case 10:
+		case 12:
+			mes "Destruction! Blessing!";
+			mes "We are the chosen!";
+			close;
+		case 5:
+			mes "Oh , God of Destruction!";
+			mes "Let your anger fall on this world!";
+			mes "Let me be the sole benefactor of your blessing!";
+			close;
+	}
+}
+
+moro_vol,81,197,5	duplicate(Faithful Believer#1)	Faithful Believer#2	4_M_BELIEVER02
+moro_vol,85,196,5	duplicate(Faithful Believer#1)	Faithful Believer#3	4_M_BELIEVER02
+moro_vol,83,193,5	duplicate(Faithful Believer#1)	Faithful Believer#4	4_M_BELIEVER02
+moro_vol,82,189,5	duplicate(Faithful Believer#1)	Faithful Believer#5	4_M_BELIEVER02
+moro_vol,87,193,5	duplicate(Faithful Believer#1)	Faithful Believer#6	4_M_BELIEVER02
+moro_vol,86,190,5	duplicate(Faithful Believer#1)	Faithful Believer#7	4_M_BELIEVER02
+moro_vol,90,191,5	duplicate(Faithful Believer#1)	Faithful Believer#8	4_M_BELIEVER02
+moro_vol,89,188,5	duplicate(Faithful Believer#1)	Faithful Believer#9	4_M_BELIEVER02
+moro_vol,93,189,5	duplicate(Faithful Believer#1)	Faithful Believer#10	4_M_BELIEVER02
+moro_vol,93,185,5	duplicate(Faithful Believer#1)	Faithful Believer#11	4_M_BELIEVER02
+moro_vol,97,187,5	duplicate(Faithful Believer#1)	Faithful Believer#12	4_M_BELIEVER02
+
+moro_vol,88,107,5	script	Wise Mage Dophe#fb	4_F_FAIRYKID5,{
+	mes "[Dophe]";
+	mes "A human, I see.";
+	mes "Looking at you, I can not help but think about our situation.";
+	mes "You and me having a conversation.";
+	next;
+	mes "[Dophe]";
+	mes "This dimensional rift where the Demon God took as residence falls under the jurisdiction of Bifrost.";
+	next;
+	mes "[Dophe]";
+	mes "Him and us are as two sides of a coin, or above and below the water line.";
+	next;
+	mes "[Dophe]";
+	mes "Him and us are not exactly running parallel to each other , but maybe standing in a parallel universe of each other.";
+	next;
+	mes "[Dophe]";
+	mes "...";
+	next;
+	mes "[Dophe]";
+	mes "My point is : It could be beneath our noses , and we would not be able to see it.";
+	next;
+	mes "[Dophe]";
+	mes "If the lair it is located somewhere in the territory of Bifrost , the only possible scenario for us is elimination.";
+	close;
+}
+
+moro_vol,87,104,5	script	Wise Mage Konpana#fb	4_M_FAIRYKID5,{
+	mes "[Konpana]";
+	mes "This place is nothing like I imagined.";
+	mes "No lawn, field or forest, really?";
+	close;
+}
+
+moro_vol,88,102,5	script	Wise Mage Makia#fb	4_M_FAIRYKID3,{
+	mes "[Makia]";
+	mes "This place is full of strange creatures.";
+	mes "Everything in this place is burning with fire, yet the air is not stuffy.";
+	mes "Incredible.";
+	close;
+}
+
+moro_vol,105,97,3	script	Expedition Assassin#1	4_M_ACROSS,{
+	mes "[Expedition Assassin]";
+	mes "A new mission will be announced soon.";
+	mes "Our goal is to locate the Demon God.";
+	next;
+	mes "[Expedition Assassin]";
+	mes "Let me check the information that our ancestors left us.";
+	close;
+}
+
+moro_vol,103,96,5	script	Expedition Assassin#2	4_F_ACROSS,{
+	mes "[Expedition Assassin]";
+	mes "This area ... Well ...";
+	mes "I 'll check it later.";
+	next;
+	mes "[Expedition Assassin]";
+	mes "*Sigh*";
+	mes "Can not you see we're having a meeting? Please leave.";
+	close;
+}
+
+moro_vol,105,95,1	script	Expedition Assassin#3	4_TOWER_15,{
+	mes "[Expedition Assassin]";
+	mes "...";
+	mes "Well, I 'm in the food chain.";
+	mes "I'll just watch what my seniors do.";
+	mes "That's all.";
+	close;
+}
+
+moro_vol,0,0,0,0	monster	--en--	3061,5,0,0,"Jarute HesLanta#mv::OnBoxKill"
+
+moro_vol,134,83,5	script	Jarute HesLanta#mv	4_MAN_JERUTOO,{
+	if (questprogress(7580, PLAYTIME) == 2) {
+		mes "[Jarute HesLanta]";
+		mes "You may do the Rampaging Box quest again.";
+		erasequest 7580;
+		next;
+	} else if (questprogress(7580, PLAYTIME) == 1) {
+		mes "[Jarute HesLanta]";
+		mes "Leave the box research to the subjugators for now. You deserve a rest.";
+		close;
+	}
+	if (questprogress(7579,HUNTING) == 2) {
+		if ( countitem(Bradium_Box) < 10 ) {
+			mes "[Jarute HesLanta]";
+			mes "You do not have enough Bradium Boxes.";
+			close;
+		}
+		mes "[Jarute HesLanta]";
+		mes "Oh wow, you sure are fast.";
+		next;
+		mes "[Jarute HesLanta]";
+		mes "These will surely help us with our weaponry, I hope you can help us again tomorrow.";
+		changequest 7579,7580;
+		getexp 800000,800000;
+		delitem Bradium_Box,10;
+		mes "[Gained 800,000 Base Exp]";
+		mes "[Gained 800,000 Job Exp]";
+		close;
+	} else if (questprogress(7578,HUNTING) == 2) {
+		if ( countitem(Bradium_Box) < 1 ) {
+			mes "[Jarute HesLanta]";
+			mes "You do not have enough Bradium Boxes.";
+			close;
+		}
+		mes "[Jarute HesLanta]";
+		mes "Hmmmmm, interesting, seems that these are just enchanted Bradium Boxes.";
+		next;
+		mes "[Jarute HesLanta]";
+		mes "If you don't mind, can you get me 10 more of these so I can do more research.";
+		changequest 7578,7579;
+		delitem Bradium_Box,1;
+		rampagingboxes = 1;
+		close;
+	} else if ( jarudemorovol == 1 ) && ( questprogress(7578) == 0 ) {
+		mes "[Jarute HesLanta]";
+		mes "Have you run into any of the Mimics here?";
+		mes "There is something unusual about them.";
+		next;
+		mes "[Jarute HesLanta]";
+		if ( rampagingboxes == 1 ) {
+			setquest 7579;
+			mes "Can you go and destroy 10 for me so we can research it further?";
+		} else {
+			setquest 7578;
+			mes "Can you go and destroy one for me so we can research it further?";
+		}
+		close;
+	} else if( questprogress(7203) == 2 ) && ( jarudemorovol == 0 ) {
+		mes "[Jarute HesLanta]";
+		mes "You came here , too.";
+		mes "You can communicate with me without the ring , I see.";
+		next;
+		mes "[Jarute HesLanta]";
+		mes "Now I wonder how far the grace of Bifrost reaches.";
+		mes "Maybe I should use this opportunity to get to know the Laphines.";
+		next;
+		mes "[Jarute HesLanta]";
+		mes "I admire the bravery of HesLanta.";
+		mes "He came to the battlefield , ready to ally our Laphines enemies.";
+		next;
+		mes "[Jarute HesLanta]";
+		mes "I really hope we do not have to fight the Laphines here.";
+		getitem Sapa_Feat_Cert,1;
+		jarudemorovol = 1;
+		close;
+	} else {
+		mes "[Jarute HesLanta]";
+		mes "Scheeming... everyday someone is trying to come up with a new way to hurt us.";
+		mes "They won't get away with it!";
+		close;
+	}
+OnBoxKill:
+	if( questprogress(7578) == 1 ) {
+		getitem Bradium_Box,1;
+	}
+	end;
+}
+
+moro_vol,138,84,3	script	Assistente Tiera#fb	4_MAN_NITT,{
+	mes "[Tiera]";
+	mes "The Jaruths and Nits in Diel of Dicastes may have agreed with the appeal of HesLanta.";
+	next;
+	mes "[Tiera]";
+	mes "But I'm through with it at that.";
+	mes "Our enemies are our friends before the common enemy : the Demon God.";
+	next;
+	mes "[Tiera]";
+	mes "We can be cowards and let others fight for us, of course , but what if they lose? We fall down with them , and that's our problem.";
+	next;
+	mes "[Tiera]";
+	mes "The same goes for you humans.";
+	mes "We fight this fight to win.";
+	close;
+}
+
+moro_vol,134,87,1	script	Commander Avalanche#fb	4_MAN_GALTUN,{
+	mes "[Avalanche]";
+	mes "My unit is the best of the best.";
+	mes "Human Warrior , I waited for this day to fight by your side.";
+	next;
+	mes "[Avalanche]";
+	mes "I swear on my life that I will not stop fighting until the Demon God is defeated!";
+	close;
+}
+
+moro_vol,131,86,1	script	Guard of Dicastes#fb1	4_MAN_GALTUN1,{
+	mes "[Guard of Dicastes]";
+	mes "When can we fight?";
+	mes "When?";
+	next;
+	mes "[Guard of Dicastes]";
+	mes "I can't believe I have to fight next to those damn Laphines.";
+	mes "I still remember what they did in the last battle.";
+	close;
+}
+
+moro_vol,138,87,7	script	Guard of Dicastes#fb2	4_MAN_GALTUN1,{
+	mes "[Guard of Dicastes]";
+	mes "My duty is to protect the Jarute HesLanta.";
+	mes "You better back off , or I will consider you my enemy.";
+	close;
+}
+
+moro_vol,86,167,7	script	Base Defender#fb1	4_M_CRU_HEAD,3,3,{
+	mes "[Advanced Base Defender]";
+	switch(atoi(replacestr(strnpcinfo(2),"fb",""))) {
+		case 1:
+		case 11:
+			mes "This place is very dangerous Return to base now!";
+			close;
+		case 2:
+		case 12:
+			mes "I guarantee that no monster well get into the base.";
+			close;
+		case 3:
+		case 13:
+			mes "Ahh ... How long do I have to do this ?";
+			close;
+		case 4:
+		case 14:
+			mes "Do not worry, I'm here to protect you.";
+			close;
+		case 5:
+		case 15:
+			mes "We 're in the middle of the battlefield. I can not talk much.";
+			close;
+		case 6:
+		case 16:
+			mes "Please move. You're blocking my view.";
+			close;
+		case 7:
+		case 17:
+			mes "If you have time to get small talk, instead go kill another enemy.";
+			close;
+		case 8:
+		case 18:
+			mes "Bah , I'm cold and hungry ... Oh , I'm just talking to myself.";
+			close;
+		case 9:
+		case 19:
+			mes "Be careful. This place is full of dangerous creatures .";
+			close;
+		case 10:
+		case 20:
+			mes "For each monster I kill one or more appear to take its place.";
+			close;
+	}
+	
+OnTouch:
+	end;
+
+OnTouchNPC:
+	if (getd(".def" + strnpcinfo(2)))
+		end;
+	setd ".def" + strnpcinfo(2), 1;
+	specialeffect EF_BEGINSPELL;
+	switch(rand(1,5)) {
+		case 1:
+			showscript "Stop right there monsters! You shall not pass!", getnpcid(0);
+			break;
+		case 2:
+			showscript "Not a single step closer to our base monsters!", getnpcid(0);
+			break;
+		case 3:
+			showscript "Disappear monsters! This land belongs to the Army of the Holy Light!", getnpcid(0);
+			specialeffect EF_SIGNUM;
+			unitwarp 0,"this",-1,-1;
+			setd ".def" + strnpcinfo(2), 0;
+			end;
+		default:
+			break;
+	}
+	switch(rand(1,4)) {
+		case 1:
+			specialeffect EF_STORMGUST;
+			break;
+		case 2:
+			specialeffect EF_LORD;
+			break;
+		case 3:
+			specialeffect EF_SUI_EXPLOSION;
+			break;
+		case 4:
+			specialeffect EF_SIGNUM;
+			break;
+	}
+	unitwarp 0,"this",-1,-1;
+	setd ".def" + strnpcinfo(2), 0;
+	end;
+}
+
+moro_vol,94,166,7	duplicate(Base Defender#fb1)	Base Defender#fb2	4_M_CRU_KNT,3,3
+moro_vol,100,165,7	duplicate(Base Defender#fb1)	Base Defender#fb3	4_M_CRU_SOLD,3,3
+moro_vol,107,164,7	duplicate(Base Defender#fb1)	Base Defender#fb4	4_M_KY_HEAD,3,3
+moro_vol,114,162,7	duplicate(Base Defender#fb1)	Base Defender#fb5	4_M_KY_KIYOM,3,3
+moro_vol,121,160,7	duplicate(Base Defender#fb1)	Base Defender#fb6	4_M_KY_KNT,3,3
+moro_vol,128,158,7	duplicate(Base Defender#fb1)	Base Defender#fb7	4_M_CRU_HEAD,3,3
+moro_vol,136,155,7	duplicate(Base Defender#fb1)	Base Defender#fb8	4_M_CRU_KNT,3,3
+moro_vol,142,152,7	duplicate(Base Defender#fb1)	Base Defender#fb9	4_M_CRU_SOLD,3,3
+moro_vol,149,148,7	duplicate(Base Defender#fb1)	Base Defender#fb10	4_M_KY_HEAD,3,3
+moro_vol,156,144,7	duplicate(Base Defender#fb1)	Base Defender#fb11	4_M_KY_KIYOM,3,3
+moro_vol,162,137,5	duplicate(Base Defender#fb1)	Base Defender#fb12	4_M_KY_KNT,3,3
+moro_vol,168,130,5	duplicate(Base Defender#fb1)	Base Defender#fb13	4_M_CRU_HEAD,3,3
+moro_vol,174,123,5	duplicate(Base Defender#fb1)	Base Defender#fb14	4_M_CRU_KNT,3,3
+moro_vol,178,116,5	duplicate(Base Defender#fb1)	Base Defender#fb15	4_M_CRU_SOLD,3,3
+moro_vol,182,109,5	duplicate(Base Defender#fb1)	Base Defender#fb16	4_M_KY_HEAD,3,3
+moro_vol,185,102,5	duplicate(Base Defender#fb1)	Base Defender#fb17	4_M_KY_KIYOM,3,3
+moro_vol,187,95,5	duplicate(Base Defender#fb1)	Base Defender#fb18	4_M_KY_KNT,3,3
+moro_vol,189,88,5	duplicate(Base Defender#fb1)	Base Defender#fb19	4_M_CRU_HEAD,3,3
+moro_vol,191,81,5	duplicate(Base Defender#fb1)	Base Defender#fb20	4_M_CRU_KNT,3,3
+
+moro_vol,93,128,1	script	Laphine Fighters#fbLA1	4_M_FAIRYSOLDIER2,2,2,{
+	setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))+1;
+	if (getd(".wait" + strnpcinfo(2)) > 3) {
+		if (getd(".wait" + strnpcinfo(2)) < 63)
+			setd ".wait" + strnpcinfo(2), 63;
+		end;
+	}
+	if (countstr(strnpcinfo(2), "LA")) {
+		setarray .@message$,
+					"Yes, yes ~"
+					"All clean.",
+					"Caution!",
+					"Careful-- It's dangerous!",
+					"... ",
+					"* Yawn *";
+	}
+	else if (countstr(strnpcinfo(2), "GA")) {
+		setarray .@message$,
+					"Please be careful.",
+					"It is dangerous to go from here. Please come back.",
+					"All clean.";
+	}
+	else if (countstr(strnpcinfo(2), "SA")) {
+		setarray .@message$,
+					"These idiots Arunafeltz, they do not come to the forefront ?",
+					"I may end up with either of you !",
+					"These continental guards are good fighters.";
+	}
+	else if (countstr(strnpcinfo(2), "SB")) {
+		setarray .@message$,
+					"Please be careful.",
+					"They do not stop coming.",
+					"...";
+	}
+	else if (countstr(strnpcinfo(2), "SC")) {
+		setarray .@message$,
+					"Back!",
+					"*Sigh*...",
+					"The guards are making things easier, but...";
+	}
+	else if (countstr(strnpcinfo(2), "SD")) {
+		setarray .@message$,
+					"Please be careful.",
+					"Back please.",
+					"...";
+	}
+	else if (countstr(strnpcinfo(2), "SE")) {
+		setarray .@message$,
+					"C- Come no closer !",
+					"Why are we the ones on the front line?",
+					"W-Where is the next aid?";
+	}
+	else if (countstr(strnpcinfo(2), "SF")) {
+		setarray .@message$,
+					"I can turn the night. I have to.",
+					"I'm always on guard wherever I go.",
+					"Stop acting like a hero and stand back !";
+	}
+	else if (countstr(strnpcinfo(2), "LB") || countstr(strnpcinfo(2), "LC")) {
+		setarray .@message$,
+					"Yes, yes ~",
+					"All clear.",
+					"Caution!",
+					"You're in the war zone . Do not lower your guard.",
+					"I worry about the people on the front lines." ;
+		if (countstr(strnpcinfo(2), "LC"))
+			.@message$[5] = "It is better that the Saphas not surround us.";
+	}
+	else if (countstr(strnpcinfo(2), "SG")) {
+		setarray .@message$,
+					"I think I chose the wrong time ... ",
+					"Argh , how'd I get myself into this mess?",
+					"I 'm tired of them screaming heretics.";
+	}
+	else if (countstr(strnpcinfo(2), "SH")) {
+		setarray .@message$,
+					"The front lines are more dangerous.",
+					" ... Noisy.",
+					"*Sigh*...";
+	}
+	else if (countstr(strnpcinfo(2), "SI")) {
+		setarray .@message$,
+					"All clear.",
+					"Caution!",
+					"I will protect this line of defense.";
+	}
+	else if (countstr(strnpcinfo(2), "SJ")) {
+		setarray .@message$,
+					"I was not napping!",
+					" ... Yes, yes ... All clear, sir!",
+					"Yes, yes, of course.";
+	}
+	else if (countstr(strnpcinfo(2), "SK")) {
+		setarray .@message$,
+					"...",
+					" May the Goddess bless you . ",
+					"I do not believe I'm fighting alongside heretics. " ;
+	}
+	else if (countstr(strnpcinfo(2), "SL")) {
+		setarray .@message$,
+					" ... This is tiring. ",
+					" * Sigh * Where is the next support ?",
+					"Hey , stop loitering You 'll end up dead . . " ;
+	}
+	else if (countstr(strnpcinfo(2), "SM")) {
+		setarray .@message$,
+					"Please be careful. ",
+					"Please step back !",
+					"Our defensive line is intact. " ;
+	}
+	else if (countstr(strnpcinfo(2), "SN")) {
+		setarray .@message$,
+					" Keep your eyes ahead! All clear !",
+					"All clean.",
+					" May the Goddess bless you . " ;
+	}
+	else if (countstr(strnpcinfo(2), "MA")) {
+		setarray .@message$,
+					"All clean.",
+					" Hm !",
+					" Get away , Humanoid . " ;
+	}
+	else if (countstr(strnpcinfo(2), "MB")) {
+		setarray .@message$,
+					"All clean.",
+					" ... ",
+					" Can you hear these insect buzzes ?";
+	}
+	else if (countstr(strnpcinfo(2), "MC")) {
+		setarray .@message$,
+					"All clean.",
+					" Because it has to be the Laphines ?";
+	}
+	else if (countstr(strnpcinfo(2), "MD")) {
+		setarray .@message$,
+					"All clean.",
+					" Hm !",
+					" We are superior to Laphines . " ;
+	}
+	else if (countstr(strnpcinfo(2), "ME")) {
+		setarray .@message$,
+					"Very noisy.",
+					" Hm !",
+					" Get away , Humanoid . " ;
+	}
+	else if (countstr(strnpcinfo(2), "MF")) {
+		setarray .@message$,
+					"Hm!",
+					" Get away , Humanoid . ",
+					" We Galtuns never step back !";
+	}
+	showscript .@message$[rand(getarraysize(.@message$))], getnpcid(0);
+	initnpctimer;
+	end;
+
+OnTimer1000:
+	stopnpctimer;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		setd ".wait" + strnpcinfo(2), getd(".wait" + strnpcinfo(2))-1;
+	if (getd(".wait" + strnpcinfo(2)) > 0)
+		initnpctimer;
+	end;
+
+OnTouch:
+	end;
+
+OnTouchNPC:
+	if (getd(".def" + strnpcinfo(2)))
+		end;
+	setd ".def" + strnpcinfo(2), 1;
+	specialeffect EF_BEGINSPELL;
+	setarray .@message$,
+				"Don't you dare!",
+				"No way!";
+	if (countstr(strnpcinfo(2), "fbM"))
+		.@message$[2] = "You are an enemy ?";
+	showscript .@message$[rand(3)], getnpcid(0);
+	specialeffect EF_METEORSTORM;
+	unitwarp 0, "this", -1, -1;
+	setd ".def" + strnpcinfo(2), 0;
+	end;
+}
+
+moro_vol,96,130,1	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA2	4_M_FAIRYSOLDIER2,2,2
+moro_vol,99,131,1	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA3	4_M_FAIRYSOLDIER2,2,2
+moro_vol,102,132,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA4	4_M_FAIRYSOLDIER,2,2
+moro_vol,105,132,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA5	4_F_FAIRYSOLDIER,2,2
+moro_vol,108,131,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA6	4_M_FAIRYSOLDIER2,2,2
+moro_vol,111,129,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLA7	4_M_FAIRYSOLDIER,2,2
+moro_vol,114,128,1	duplicate(Laphine Fighters#fbLA1)	Guarda Continental#fbGA1	4_M_MOCASS1,2,2
+moro_vol,119,130,1	duplicate(Laphine Fighters#fbLA1)	Guarda Continental#fbGA2	4_M_MOCASS2,2,2
+moro_vol,122,130,7	duplicate(Laphine Fighters#fbLA1)	Guarda Continental#fbGA3	4_M_MOCASS1,2,2
+moro_vol,125,129,7	duplicate(Laphine Fighters#fbLA1)	Guarda Continental#fbGA4	4_M_MOCASS1,2,2
+moro_vol,127,127,7	duplicate(Laphine Fighters#fbLA1)	Guarda Continental#fbGA5	4_M_MOCASS2,2,2
+moro_vol,135,123,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSA	4_M_MONK,2,2
+moro_vol,139,124,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSB	4_F_CRU,2,2
+moro_vol,143,124,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSC	4_M_JOB_WIZARD,2,2
+moro_vol,147,124,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSD	4_M_MOC_SOLDIER,2,2
+moro_vol,150,121,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSE	4_M_MOC_SOLDIER,2,2
+moro_vol,151,119,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSF	4_M_EIN_SOLDIER,2,2
+moro_vol,153,116,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSB2	4_M_EIN_SOLDIER,2,2
+moro_vol,85,117,1	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB1	4_F_FAIRYSOLDIER,2,2
+moro_vol,89,118,1	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB2	4_M_FAIRYSOLDIER,2,2
+moro_vol,92,119,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB3	4_M_FAIRYSOLDIER,2,2
+moro_vol,96,119,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB4	4_M_FAIRYSOLDIER2,2,2
+moro_vol,100,117,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB5	4_M_FAIRYSOLDIER,2,2
+moro_vol,103,118,1	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB6	4_F_FAIRYSOLDIER,2,2
+moro_vol,107,118,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLB7	4_F_FAIRYSOLDIER,2,2
+moro_vol,110,117,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLC1	4_M_FAIRYSOLDIER2,2,2
+moro_vol,114,114,7	duplicate(Laphine Fighters#fbLA1)	Laphine Fighters#fbLC2	4_M_FAIRYSOLDIER2,2,2
+moro_vol,118,115,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSG	4_M_JOB_WIZARD,2,2
+moro_vol,121,115,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSH	4_M_EIN_SOLDIER,2,2
+moro_vol,124,116,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSI	4_M_EIN_SOLDIER,2,2
+moro_vol,128,116,1	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSJ	4_M_EIN_SOLDIER,2,2
+moro_vol,131,115,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSK	4_M_RASWORD,2,2
+moro_vol,133,113,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSL	4_DST_SOLDIER,2,2
+moro_vol,136,111,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSM	4_M_RASWORD,2,2
+moro_vol,138,108,7	duplicate(Laphine Fighters#fbLA1)	Alliance Soldier#fbSN	4_DST_SOLDIER,2,2
+moro_vol,139,104,1	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA1	4_MAN_GALTUN1,2,2
+moro_vol,143,106,1	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA2	4_MAN_GALTUN1,2,2
+moro_vol,147,108,1	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMB3	4_MAN_GALTUN1,2,2
+moro_vol,152,109,1	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA4	4_MAN_GALTUN1,2,2
+moro_vol,156,110,1	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMC4	4_MAN_GALTUN1,2,2
+moro_vol,160,110,7	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA6	4_MAN_GALTUN1,2,2
+moro_vol,164,109,7	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMD7	4_MAN_GALTUN1,2,2
+moro_vol,167,107,7	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA8	4_MAN_GALTUN1,2,2
+moro_vol,169,104,7	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbME9	4_MAN_GALTUN1,2,2
+moro_vol,171,100,5	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA10	4_MAN_GALTUN1,2,2
+moro_vol,172,95,5	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMF11	4_MAN_GALTUN1,2,2
+moro_vol,173,89,5	duplicate(Laphine Fighters#fbLA1)	Manuk Defensor#fbMA12	4_MAN_GALTUN1,2,2
+
+moro_vol,91,105,0	script	Teleporter to Eclage	PORTAL,{
+	mes "[Dophe]";
+	mes "This teleporter is connected to Eclage.";
+	mes "This will be destroyed when our operation is over, but at the moment it is something we can not live without.";
+	next;
+	mes "Use the teleporter to go to Eclage?";
+	switch(select("Go to Eclage.:Cancel.")) {
+		case 1:
+			mes "- Warping to Eclage. -";
+			close2;
+			warp "ecl_in01", 38, 96;
+			end;
+		case 2:
+			mes "- Come back when you change your mind. -";
+			close;
+	}
+}
+
+ecl_in01,38,98,0	script	Teleporter to Crack#1	PORTAL,{
+	if( questprogress(11353) == 2 ) {
+		mes "[Guard]";
+		mes "This teleporter is connected to the newly discovered hideout of the Demon God.";
+		mes "This will be destroyed when our operation is over, but at the moment is something we can not live without.";
+		next;
+		mes "Use the teleporter to enter the fire basin?";
+		switch(select("Go to Fire Basin.:Cancel.")) {
+			case 1:
+				mes "- Warping to Fire Basin. -";
+				close2;
+				warp "moro_vol", 91, 102;
+				end;
+			case 2:
+				mes "- Come back when you change your mind. -";
+				close;
+		}
+	} else {
+		mes "[Guard]";
+		mes " This teleporter is connected to the newly discovered hideout of the Demon God.";
+		mes " Only those with permission to go to the hideout can use this teleporter.";
+		close;
+	}
+}
+
+moro_vol,140,97,1	script	Dicastes Elite#fb1	4_MAN_GALTUN1,{
+	end;
+}
+
+moro_vol,143,97,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb2	4_MAN_GALTUN1
+moro_vol,146,97,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb3	4_MAN_GALTUN1
+moro_vol,140,94,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb4	4_MAN_GALTUN
+moro_vol,143,94,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb5	4_MAN_GALTUN
+moro_vol,146,94,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb6	4_MAN_GALTUN
+moro_vol,150,86,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb7	4_MAN_GALTUN1
+moro_vol,153,86,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb8	4_MAN_GALTUN1
+moro_vol,156,86,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb9	4_MAN_GALTUN1
+moro_vol,150,83,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb10	4_MAN_GALTUN
+moro_vol,153,83,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb11	4_MAN_GALTUN
+moro_vol,156,83,1	duplicate(Dicastes Elite#fb1)	Dicastes Elite#fb12	4_MAN_GALTUN
+
+moro_vol,90,181,7	script	Sentinel Base#fb1	4_M_KY_SOLD,{
+	mes "[ Sentinel Base ]" ;
+	mes "This area is dangerous . " ;
+	mes "Please keep exploring alone. " ;
+	close;
+}
+
+moro_vol,95,182,1	duplicate(Sentinel Base#fb1)	Sentinel Base#fb2	4_M_KY_SOLD
+moro_vol,100,183,1	duplicate(Sentinel Base#fb1)	Sentinel Base#fb3	4_M_KY_SOLD
+moro_vol,102,188,1	duplicate(Sentinel Base#fb1)	Sentinel Base#fb4	4_M_KY_SOLD
+moro_vol,104,193,1	duplicate(Sentinel Base#fb1)	Sentinel Base#fb5	4_M_KY_SOLD
+
+ecl_in01,40,96,3	script	Eclage Guard#14_3	4_M_FAIRYSOLDIER,{
+	mes "[Guard]";
+	mes "Como posso ajudar?";
+	next;
+	switch(select("What is this teleporter ?","Why is it so full here?","Demon God Hideout?","Bye")) {
+		case 1:
+			mes "[Guard]";
+			mes "It is connected to the newly discovered hideout of the Demon God Morroc.";
+			mes "It was specifically designed to take the user directly to the dimensional rift where the hideout is.";
+			next;
+			mes "[Guard]";
+			mes "Many warriors have already been to the hiding place." ;
+			mes "While Morrocc is there , Yggdrasil will not be safe. I will join the Expedition.";
+			close;
+		case 2:
+			mes "[Guard]";
+			mes "It turns out that the Demon God Morroc fled Morroc to hide in our dimension.";
+			mes "We have to deal with it , or banishing him back to his kingdom or destroying him.";
+			next;
+			mes "[Guard]";
+			mes "If you want to join the expedition to defeat the Demon God , then use this teleporter.";
+			mes "It will take you directly to the Advanced Base.";
+			close;
+		case 3:
+			mes "[Guard]";
+			mes "You know the dimensional rift, right? Recently it was revealed that the crack is made of dimensional passages?.";
+			mes "Now we can use these dimensional passages to explore the interior of the crack.";
+			next;
+			mes "[Guard]";
+			mes "Originally the crack was created by the God Demon to assist in his escape, so it was thought that investigating the crack could locate it.";
+			next;
+			mes "[Guard]";
+			mes "And so finally, his hiding place was discovered.";
+			mes "His features and his demons soldiers are mainly around the large hill in the center.";
+			next;
+			mes "[Guard]";
+			mes " If you want more details , then you should visit the place.";
+			mes " Just use the teleporter right there.";
+			close;
+		case 4:
+			mes "[Guard]";
+			mes " Yggdrasil bless you .";
+			close;
+	}
+}
+
+ecl_in01,37,90,3	script	Wise Mage Lemony	4_F_FAIRY2,{
+	mes "[Lemony]";
+	mes "Did you read the last issue of Door to Truth?";
+	mes "The Avant teleporter was really highlighted it?";
+	next;
+	mes "[Armandi]";
+	mes "Yes, only the basic principles and revelatory information to humans.";
+	mes "I kind of do not understand everything.";
+	next;
+	mes "[Lemony]";
+	mes "I'm wondering if it means that the Avant finally decided to pursue his interest in research activities.";
+	next;
+	mes "[Lemony]";
+	mes "Hey , Human.";
+	mes "You were spying on us? Although we were not discussing any secret.";
+	next;
+	mes "[Lemony]";
+	mes "Oh yes you are there?";
+	mes "You know, the Demon God who also created the crack was recently discovered.";
+	next;
+	mes "[Lemony]";
+	mes "If you're curious , then use that teleporter to go into the hideout.";
+	mes "There will be a spectacle to watch.";
+	mes "Oh, just so you know , you may be throwing your life away *Chuckle*.";
+	next;
+	mes "[Armandi]";
+	mes "Lemony , you really need to focus on improving your personality.";
+	mes "Tsk, tsk.";
+	close;
+}
+
+ecl_in01,35,89,5	script	Wise Mage Armandi	4_M_FAIRYKID6,{
+	mes "[Armandi]";
+	mes "I hope that the dimensional rift does not leave a great impact on the world.";
+	mes "Speaking of which, Avant never fails to amaze me.";
+	next;
+	mes "[Lemony]";
+	mes "Ack , I hate that guy." ;
+	next;
+	mes "[Armandi]";
+	mes "Avant can be repulsive, but he's the best at it." ;
+	next;
+	mes "[Lemony]";
+	mes "That I agree." ;
+	mes "Only he would think of this kind of teleporter." ;
+	mes "Because he is helping the King anyway?";
+	next;
+	mes "[Armandi]";
+	mes "When I asked him , he muttered something about repentance.";
+	mes "I can only guess it has something to do with the birth of the King.";
+	next;
+	mes "[Armandi]";
+	mes "I wanted to ask more , but he looked scornfully at me.";
+	mes "* Sigh * he is considered the best in magical scientist.";
+	next;
+	mes "[Lemony]";
+	mes "You can always study more to win it.";
+	close;
+}
+
+ecl_in01,46,102,3	script	Commander Laphine#ecl	4_M_FAIRYSOLDIER,7,7,{
+	mes "[Commander Laphine]";
+	mes "Evil has to be nipped in the bud.";
+	mes "You are an unexpected visitor from the Midgard continent.";
+	next;
+	mes "[Commander Laphine]";
+	mes "If you cause any negative comments about our size and Yggdrasil, then we will not hesitate to fight you.";
+	close;
+	
+OnTouch:
+	if (.Talk)
+		end;
+	++.Talk;
+	donpcevent "Laphine Fighters#ec1::OnTalk1";
+	donpcevent "Laphine Fighters#ec2::OnTalk1";
+	donpcevent "Laphine Fighters#ec3::OnTalk1";
+	donpcevent "Laphine Fighters#ec4::OnTalk1";
+	donpcevent "Laphine Fighters#ec5::OnTalk1";
+	donpcevent "Laphine Fighters#ec6::OnTalk1";
+	sleep 4000;
+	npctalk "Do not disappoint their colleagues in the Office of Splendor.";
+	sleep 3000;
+	donpcevent "Laphine Fighters#ec4::OnTalk2";
+	sleep 1000;
+	donpcevent "Laphine Fighters#ec1::OnTalk2";
+	sleep 500;
+	donpcevent "Laphine Fighters#ec2::OnTalk2";
+	sleep 200;
+	donpcevent "Laphine Fighters#ec5::OnTalk2";
+	sleep 100;
+	donpcevent "Laphine Fighters#ec3::OnTalk2";
+	sleep 4000;
+	npctalk " Ah , got a sudden headache ...";
+	sleep 20000;
+	--.Talk;
+	end;
+}
+
+ecl_in01,44,99,7	script	Laphine Fighters#ec1	4_M_FAIRYSOLDIER2,{
+	mes "[Laphine Fighters]";
+	mes " I 'm nervous.";
+	close;
+
+OnTalk1:
+	showscript "Argh!", getnpcid(0);
+	end;
+
+OnTalk2:
+	showscript "...", getnpcid(0);
+	end;
+}
+
+ecl_in01,46,99,7	script	Laphine Fighters#ec2	4_M_FAIRYSOLDIER2,{
+	mes "[Laphine Fighters]";
+	mes " I hope I come back whole.";
+	close;
+
+OnTalk1:
+	showscript "Argh!", getnpcid(0);
+	end;
+
+OnTalk2:
+	showscript "Ah...", getnpcid(0);
+	end;
+}
+
+ecl_in01,48,99,7	script	Laphine Fighters#ec3	4_M_FAIRYSOLDIER2,{
+	mes "[Laphine Fighters]";
+	mes "Hmm...";
+	close;
+
+OnTalk1:
+	showscript "Argh!", getnpcid(0);
+	end;
+
+OnTalk2:
+	showscript "...", getnpcid(0);
+	end;
+}
+
+ecl_in01,44,97,7	script	Laphine Fighters#ec4	4_M_FAIRYSOLDIER,{
+	mes "[Laphine Fighters]";
+	mes "Meh.";
+	close;
+
+OnTalk1:
+	showscript "Ah!", getnpcid(0);
+	end;
+
+OnTalk2:
+	showscript "Yes, yes.", getnpcid(0);
+	end;
+}
+
+ecl_in01,46,97,7	script	Laphine Fighters#ec5	4_M_FAIRYSOLDIER,{
+	mes "[Laphine Fighters]";
+	mes "Mwa hah hah , it's time for me to shine!";
+	close;
+
+OnTalk1:
+	showscript "Argh!", getnpcid(0);
+	end;
+
+OnTalk2:
+	showscript "...", getnpcid(0);
+	end;
+}
+
+ecl_in01,48,97,7	script	Laphine Fighters#ec6	4_M_FAIRYSOLDIER,{
+	mes "[Laphine Fighters]";
+	mes "I was out of my mind when I decided to join.";
+	close;
+
+OnTalk1:
+	showscript "Argh!", getnpcid(0);
+	end;
+}
+
+moro_vol,95,96,5	shop	Loja de Utilidades#fb	4_CAT_DOWN,611:-1,501:-1,502:-1,503:-1,504:-1,645:-1,656:-1,601:-1,602:-1,1065:-1,1750:-1
+
+// = Dimensional Travel =============================================
+dali,64,128,0	warp	dali1-2	1,1,dali02,65,112
+dali02,64,128,0	warp	dali2-1	1,1,dali,65,112
+
+morocc,137,238,3	script	Piled Rags	4_M_DIEMAN,{
+	if(questprogress(11351) == 1 ) {
+		mes "[Tamarin]";
+		mes "Meet me at the Oasis.";
+		close;
+	}
+	if(questprogress(11349) == 1 ) {
+		if ( countitem(Monster's_Feed) < 1 ) {
+			mes "He seems to be in need of some food, hurry and bring him a Monster's Feed.";
+			close;
+		}
+		delitem Monster's_Feed,1;
+		completequest 11349;
+		setquest 11350;
+		mes "[Tamarin]";
+		mes "Thank you adventurer, I wasn't sure if I was going to make it.";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Oh wow, you stink!";
+		next;
+		mes "[Tamarin]";
+		mes "Well ofcourse I stink! I was trapped under there for days.";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "You should definitely head to the Oasis and take a bath.";
+		next;
+		mes "[Tamarin]";
+		mes "Fine, I'll head to the oasis, but come meet me there I have something interesting to tell you.";
+		completequest 11350;
+		setquest 11351;
+		close;
+	}
+	if(questprogress(11349) == 0 ) {
+		mes "Someone seems to be trapped under the pile of Rags. Do you wish to remove them?";
+		switch(select("Yes","No")) {
+		 case 1:
+			mes "*Rags removed*";
+			next;
+			mes "[Tamarin]";
+			mes "Thank.. you...";
+			mes "I... was sure... I was done for.";
+			next;
+			mes "[Tamarin]";
+			mes "Can you please help...";
+			mes "...me regain my strength.";
+			next;
+			mes "*He seems to be in need of some food, hurry and bring him a Monster's Feed.*";
+			setquest 11349;
+			close;
+		
+		 case 2:
+			mes "You leave the stranger to die.";
+			close;
+		}
+	}
+	end;
+}
+
+moc_ruins,107,139,3	script	Tamarin#Oasis	4_M_TAMARIN,{
+	if( questprogress(11351) == 1 ) {
+		mes "[Tamarin]";
+		mes "Ahhhh, I feel much better now, thank you for everything.";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "You smell better too!";
+		next;
+		mes "[Tamarin]";
+		mes "Anyway, have you been to the Dimensional Crack yet? It is truly a mysterious place. I have spent some time there my self and I have seen some things.";
+		next;
+		mes "[Tamarin]";
+		mes "But that is only the beginning, there is an important battle taking place.";
+		mes "The Devil God him self is coming and we are gathering a huge force in order to deal with him.";
+		next;
+		mes "[Tamarin]";
+		mes "You seem like the type that would be interested in crazy adventures, why don't you meet me at the Dimensional Crack.";
+		next;
+		mes "[Tamarin]";
+		mes "I have somethign I want to show you there.";
+		completequest 11351;
+		setquest 11352;
+		close;
+	} else {
+		mes "[Tamarin]";
+		mes "Leave me, I am washing my self.";
+		close;
+	}
+}
+
+dali,112,69,3	script	Tamarin#Dali	4_M_TAMARIN,{
+	if( questprogress(11352) == 1 ) {
+		mes "[Tamarin]";
+		mes "Ah you made it.";
+		next;
+		mes "[Tamarin]";
+		mes "Things are going to get really interesting.";
+		mes "Well interesting or the world will end, one or the other.";
+		next;
+		mes "[Tamarin]";
+		mes "We have gathered the biggest force in Midgard history at the Fire Basin.";
+		next;
+		mes "[Tamarin]";
+		mes "Meet me by the sand mound in the second level of the Dimensional Crack.";
+		completequest 11352;
+		setquest 11353;
+		close;
+	} else if( questprogress(11353) == 1 ) {
+		mes "[Tamarin]";
+		mes "Well, get to it.";
+		close;
+	} else {
+		mes "[Tamarin]";
+		mes "Greetings, I am waiting for someone.";
+		close;
+	}
+}
+
+dali02,88,62,3	script	Tamarin#Dali02	4_M_TAMARIN,{
+	if( questprogress(11353) == 1 ) {
+		mes "[Tamarin]";
+		mes "Took you long enough.";
+		next;
+		mes "[Tamarin]";
+		mes "See this Sand Mound here next to me? Well it's no normal sand mound.";
+		next;
+		mes "[Tamarin]";
+		mes "There is actually a teleportation device hidden underneath it, it will allow you to travel to the Fire Basin.";
+		next;
+		mes "[Tamarin]";
+		mes "There you will be able to meet a lot of interesting people and take part in some great battles.";
+		next;
+		mes "[Tamarin]";
+		mes "I will also be heading there shortly after guiding some more adventurers, feel free to enter at any time now that you have my permission.";
+		completequest 11353;
+		setquest 11354;
+		close;
+	} else if( questprogress(11353) == 2 ) {
+		mes "[Tamarin]";
+		mes "Nice to see you again.";
+		close;
+	} else {
+		mes "[Tamarin]";
+		mes "Nothing to see here.";
+		close;
+	}
+}
+
+dali02,88,61,3	script	Sand Mound#Dali02	4_SOIL,{
+	if( questprogress(11353) == 2 ) {
+		mes "Do you wish to enter the Fire Basin.";
+		switch(select("No","Yes")) {
+		 case 1:
+			close;
+		 case 2:
+			warp "moro_vol", 193, 172;
+		}
+	} else {
+		mes "Kind of a weird place for a sand mound.";
+		close;
+	}
+}
+moro_vol,0,0,0,0	monster	--en--	3020,30,0,0,0
+moro_vol,0,0,0,0	monster	--en--	3021,30,0,0,"Bargat Tiblack#moro_vol::OnFireSandMan"
+moro_vol,0,0,0,0	monster	--en--	3022,30,0,0,0
+moro_vol,0,0,0,0	monster	--en--	3023,30,0,0,0
+moro_vol,0,0,0,0	monster	--en--	3026,10,0,0,"Bargat Tiblack#moro_vol::OnFirePit"
+moro_vol,0,0,0,0	monster	--en--	3027,10,0,0,0
+moro_vol,0,0,0,0	monster	--en--	1918,15,0,0,0
+moro_vol,0,0,0,0	monster	--en--	1919,15,0,0,0
+moro_vol,0,0,0,0	monster	--en--	1920,15,0,0,0
+moro_vol,0,0,0,0	monster	--en--	1921,15,0,0,0
+moro_vol,0,0,0,0	monster	--en--	3028,50,0,0,0
+
+moro_vol,136,136,3	script	Sand Mound#moro_vol	4_SOIL,{
+	mes "Do you wish to go back to the Dimensional Crack.";
+	switch(select("No","Yes")) {
+	 case 1:
+		close;
+	 case 2:
+		warp "dali02", 65, 112;
+	}
+}
+
+moro_cav,59,14,3	script	Sand Mound#moro_cav	4_SOIL,{
+	mes "Do you wish to go back to the Fire Basin.";
+	switch(select("No","Yes")) {
+	 case 1:
+		close;
+	 case 2:
+		warp "moro_vol", 137, 137;
+	}
+}
+
+moro_vol,198,179,3	script	Tamarin#moro_vol	4_M_TAMARIN,{
+	if( questprogress(11362) == 2 ) {
+		mes "[Tamarin]";
+		mes "Do you wish to enter the Fire Cave.";
+		switch(select("No","Yes")) {
+		 case 1:
+			close;
+		 case 2:
+			warp "moro_cav", 58, 15;
+		}
+	} else if( questprogress(11354) == 1 ) {
+		mes "[Tamarin]";
+		mes "Well I would like to avoid all the useless chat and get you right into things.";
+		next;
+		mes "[Tamarin]";
+		mes "Go find Bargat Tiblack and talk to him, he will give you a task.";
+		close;
+	} else if( questprogress(11356) == 1 ) {
+		mes "[Tamarin]";
+		mes "Hey thanks for coming, listen I have been gathering these Sonias and Yummy Stems.";
+		next;
+		mes "[Tamarin]";
+		mes "Bargat asked me to help him out with some of those, I will go deliver these to him, you finish hunting the rest and then bring them to me.";
+		completequest 11356;
+		setquest 11357;
+		close;
+	} else if (questprogress(11357,HUNTING) == 2) {
+		if ( countitem(Yummy_Stem) < 25 ) {
+			mes "[Bargat Tiblack]";
+			mes "You still need 25 Yummy Stems.";
+			close;
+		}
+		mes "[Tamarin]";
+		mes "Well done.";
+		next;
+		mes "[Tamarin]";
+		mes "This will greatly help us out. Go see Bargat and let him know we are all done.";
+		delitem Yummy_Stem,25;
+		completequest 11357;
+		setquest 11358;
+		close;
+	} else if( questprogress(11357) == 1 ) {
+		mes "[Bargat Tiblack]";
+		mes "I will need:";
+		mes "25 Yummy Stems";
+		mes "Also please pick 25 Sonas.";
+		close;
+	} else {
+		mes "[Tamarin]";
+		mes "If you have time to stand around, go and kill some enemies.";
+		close;
+	}
+}
+
+moro_vol,142,131,3	script	Bargat Tiblack#moro_vol	4_M_ALCHE_D,{
+	if( questprogress(11362) == 1 ) {
+		mes "[Bargat Tiblack]";
+		mes "Oh that's a relief!";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "Thank you so much, now we can finally explore the Fire Cave.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "Take this as a little reward.";
+		getexp 0,1500000;
+		next;
+		mes "[Gained 1,500,000 Job Exp]";
+		mes "[Gained Access to Fire Cave]";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "Just Talk to Tamarin and he will let you enter the Fire Cave.";
+		completequest 11362;
+		close;
+	} else if( questprogress(11358) == 1 ) {
+		mes "[Bargat Tiblack]";
+		mes "All done? That's great!";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "We can finally make some progress here and then we can safely enter the Fire Cave.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "I will need you to go and visit Instructor Rugen down in the Southwest region and let him know we will soon be ready to go.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "I also did some research on these stems that Tamarin gave me, take them to Rugen and have the patients eat them.";
+		getitem Yummy_Stem,25;
+		completequest 11358;
+		setquest 11359;
+		close;
+	} else if (questprogress(11355,HUNTING) == 2) {
+		if ( countitem(Burning_Bug_Skin) < 50 ) {
+			mes "[Bargat Tiblack]";
+			mes "You still need 50 Burning Bug Skins.";
+			close;
+		}
+		mes "[Bargat Tiblack]";
+		mes "Well done.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "Now I will need you to pick 50 Sonias and get 50 Yummy Stems.";
+		delitem Burning_Bug_Skin,50;
+		completequest 11355;
+		setquest 11356;
+		close2;
+		announce "Tamarin: Come talk to me right away!",bc_self;
+		end;
+	} else if( questprogress(11354) == 1 ) {
+		mes "[Bargat Tiblack]";
+		mes "Hello there adventurer, I am very happy to see you here, Tamarin has already sent me a message.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "In order to be able to enter the Fire Cave, we need some more research materials.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "Let's start off by collecting some basic materials from the monsters around here.";
+		next;
+		mes "[Bargat Tiblack]";
+		mes "I will need:";
+		mes "50 Burning Bug Skins";
+		mes "Also please destroy 20 fire pits.";
+		completequest 11354;
+		setquest 11355;
+		close;
+	} else if( questprogress(11355) == 1 ) {
+		mes "[Bargat Tiblack]";
+		mes "I will need:";
+		mes "50 Burning Bug Skins";
+		mes "Also please destroy 20 fire pits.";
+		close;
+	} else {
+		mes "[Bargat Tiblack]";
+		mes "I am busy right now.";
+		close;
+	}
+	end;
+	
+	OnFirePit:
+		getmapxy .@map$,.@x,.@y,UNITTYPE_PC;
+		areamonster .@map$,(.@x-1),(.@y-1),(.@x+1),(.@y+1),"--en--",3027,10;
+		end;
+		
+	OnFireSandMan:
+		if( questprogress(1266) == 1 ) {
+			if ( rand(9) == 1 ) {
+				getitem Patrol_Log,1;
+			}
+		}
+		end;
+	
+}
+
+moro_vol,105,71,3	script	Instructor Rugen	4_M_YOUNGKNIGHT,{
+	if( questprogress(11359) == 1 ) {
+		mes "[Instructor Rugen]";
+		mes "So Bargat Sent you? How can we be ready?! We still don't have a cure.";
+		next;
+		mes "[Instructor Rugen]";
+		mes "Oh really? We need to try it right away and see if it will help the patients.";
+		mes "Please try feeding the patients.";
+		completequest 11359;
+		setquest 11360;
+		close;
+	} else if( questprogress(11361) == 1 ) {
+		mes "[Instructor Rugen]";
+		mes "Oh wow, that actually worked, the patients will be up in no time.";
+		next;
+		mes "[Instructor Rugen]";
+		mes "Run back to Bargat and let him know the stems worked, we will be able to explore the Fire Cave now.";
+		completequest 11361;
+		setquest 11362;
+		close;
+	} else {
+		mes "[Instructor Rugen]";
+		mes "I'm taking care of the patients.";
+		close;
+	}
+}
+
+moro_vol,107,69,3	script	Intoxicated Patient	4_M_PATIENT,{
+	if( questprogress(11360) == 1 ) {
+		mes "[Intoxicated Patient]";
+		mes "... urghhh.";
+		delitem Yummy_Stem,25;
+		next;
+		mes "[Intoxicated Patient]";
+		mes "I'm... starting to feel better...";
+		completequest 11360;
+		setquest 11361;
+		close;		
+	} else {
+		mes "[Intoxicated Patient]";
+		mes "...";
+		close;
+	}
+}
+moro_vol,104,70,1	duplicate(Intoxicated Patient)	Intoxicated Patient#2	4_M_LIEMAN
+moro_vol,102,71,5	duplicate(Intoxicated Patient)	Intoxicated Patient#3	4_F_PATIENT
+
+moro_cav,32,73,5	trader	Hero Token Exchanger	1_M_MERCHANT,{
+	
+	OnInit:
+	tradertype(NST_CUSTOM);
+	sellitem Hero_Ring,30;
+	end;
+
+OnCountFunds:
+	setcurrency(countitem(Token_Of_Hero));
+	npctalk "I will trade you these items for your Tokens of Hero.";
+	end;
+
+OnPayFunds:
+	if( countitem(Token_Of_Hero) < @price ) {
+		npctalk "You do not have enough Tokens of Hero for that.";
+		end;
+	}
+	delitem Token_Of_Hero,@price;
+	purchaseok();
+	end;
+}
+
+moro_cav,34,65,5	trader	Expert Enchanter Byrnes	4_M_CAVE1,{
+disable_items;
+.@part = EQI_ACC_R;
+	if (checkweight(1201,1) == 0) {
+		mes "You are carrying too many items, please reduce it and come back again!";
+		close;
+	}
+	if (MaxWeight - Weight < 10000) {
+		mes "You are over the weight limit, please reduce it and come back again!";
+		close;
+	}
+	mes "[Expert Enchanter Byrnes]";
+	mes "Hello my boy";
+	mes "I can enchant your Hero Ring for free, however if you decide to reset your enchants, it will cost 3 Tokens of Hero.";
+	next;
+	mes "[Expert Enchanter Byrnes]";
+	mes "Do you wish to enchant?";
+	switch(select("Let me think about it","Clear Ring Enchants","Enchant my Hero Ring")) {
+	 case 1:
+		mes "[Expert Enchanter Byrnes]";
+		mes "Come back after you have made up your mind!";
+		close;
+	 case 2:
+		if ( countitem(Token_Of_Hero) < 15 ) {
+			next;
+			mes "[Expert Enchanter Byrnes]";
+			mes "Resetting costs 3 Tokens of Hero, you do not have enough Tokens.";
+			close;
+		}
+		.@equip_id = getequipid(.@part);
+		.@item$ = "|2981|";
+		.@equip_refine = getequiprefinerycnt(.@part);
+		if (!compare(.@item$,"|"+.@equip_id+"|")) {
+			next;
+			mes "[Expert Enchanter Byrnes]";
+			mes "Sorry but you are not wearing the appropriate accessory.";
+			close;
+		}
+		next;
+		mes "[Expert Enchanter Byrnes]";
+		mes "Are you sure? This will clear all enchants on the ring.";
+		if (select("No, Changed my mind","Yes, I'm sure") == 1) {
+			next;
+			mes "[Expert Enchanter Byrnes]";
+			mes "Come back after you have made up your mind!";
+			close;
+		}
+		delequip .@part;
+		getitem 2981,1;
+		delitem Token_Of_Hero,3;
+	 case 3:
+	}
+	next;
+	if ( getequipid(EQI_ACC_L) != -1 ) {
+		mes "[Expert Enchanter Byrnes]";
+		mes "You have an accessory in the left equip window, please take it off.";
+		close;
+	}
+	mes "[Expert Enchanter Byrnes]";
+	mes "Please make sure you are wearing the accessory on your character's right hand side.";
+	next;
+	mes "[Expert Enchanter Byrnes]";
+	mes "Your 1st Enchantment will be one of the following:";
+	mes "STR 1-5";
+	mes "AGI 1-5";
+	mes "DEX 1-5";
+	mes "VIT 1-5";
+	mes "INT 1-5";
+	mes "LUK 1-5";
+	next;
+	mes "[Expert Enchanter Byrnes]";
+	mes "Your 2nd Enchant bonus will increase your Atk or Matk by 1% - 5%";
+	mes "Your 3rd Enchant bonus will increase your max HP or SP";
+	mes "Your 4th enchant will increase your def or mdef.";
+	next;
+	mes "[Expert Enchanter Byrnes]";
+	mes "Are you 100% sure you want to enchant?";
+	if (select("No, Changed my mind","Yes, I'm sure") == 1) {
+		next;
+		mes "[Expert Enchanter Byrnes]";
+		mes "Come back after you have made up your mind!";
+		close;
+	}
+	setarray .@equip_card[0], getequipcardid(.@part,0), getequipcardid(.@part,1), getequipcardid(.@part,2), getequipcardid(.@part,3);
+	if (!getequipisequiped(.@part)) {
+		next;
+		mes "[Expert Enchanter Byrnes]";
+		mes "You are not wearing anything in your character's right hand side accessory slot.";
+		close;
+	}
+	.@equip_id = getequipid(.@part);
+	.@item$ = "|2981|";
+	.@equip_refine = getequiprefinerycnt(.@part);
+	next;
+	if (!compare(.@item$,"|"+.@equip_id+"|")) {
+		next;
+		mes "[Expert Enchanter Byrnes]";
+		mes "Sorry but you are not wearing the appropriate accessory.";
+		close;
+	}
+	if (.@equip_card[3]) {
+		next;
+		mes "[Expert Enchanter Byrnes]";
+		mes "This ring has already been enchanted to the max!";
+		close;
+	} else if ( .@equip_card[0] == 0 ) {
+		mes "Please pick your stat for the first enchant.";
+		switch(select("STR","INT","AGI","VIT","DEX","LUK","Cancel")) {
+		 case 1:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4700; //Strength1
+			else if (.@i < 601)    .@enchant = 4701; //Strength2
+			else if (.@i < 701)    .@enchant = 4702; //Strength3
+			else if (.@i < 751)    .@enchant = 4703; //Strength4
+			else if (.@i < 776)    .@enchant = 4704; //Strength5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 2:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4710; //Inteligence1
+			else if (.@i < 601)    .@enchant = 4711; //Inteligence2
+			else if (.@i < 701)    .@enchant = 4712; //Inteligence3
+			else if (.@i < 751)    .@enchant = 4713; //Inteligence4
+			else if (.@i < 776)    .@enchant = 4714; //Inteligence5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 3:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4730; //Agility1
+			else if (.@i < 601)    .@enchant = 4731; //Agility2
+			else if (.@i < 701)    .@enchant = 4732; //Agility3
+			else if (.@i < 751)    .@enchant = 4733; //Agility4
+			else if (.@i < 776)    .@enchant = 4734; //Agility5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 4:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4740; //Vitality1
+			else if (.@i < 601)    .@enchant = 4741; //Vitality2
+			else if (.@i < 701)    .@enchant = 4742; //Vitality3
+			else if (.@i < 751)    .@enchant = 4743; //Vitality4
+			else if (.@i < 776)    .@enchant = 4744; //Vitality5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 5:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4720; //Dexterity1
+			else if (.@i < 601)    .@enchant = 4721; //Dexterity2
+			else if (.@i < 701)    .@enchant = 4722; //Dexterity3
+			else if (.@i < 751)    .@enchant = 4723; //Dexterity4
+			else if (.@i < 776)    .@enchant = 4724; //Dexterity5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 6:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4750; //Luck1
+			else if (.@i < 601)    .@enchant = 4751; //Luck2
+			else if (.@i < 701)    .@enchant = 4752; //Luck3
+			else if (.@i < 751)    .@enchant = 4753; //Luck4
+			else if (.@i < 776)    .@enchant = 4754; //Luck5
+			.@equip_card[0] = .@enchant;
+			break;
+		 case 7:
+			mes "[Expert Enchanter Byrnes]";
+			mes "Come back after you have made up your mind!";
+			close;
+		}
+	} else if ( .@equip_card[1] == 0 ) && ( .@equip_card[0] != 0 ) {
+		mes "Please pick your bonus for the second enchant.";
+		switch(select("ATK","MATK","Cancel")) {
+		 case 1:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4819; //Atk1
+			else if (.@i < 601)    .@enchant = 4766; //Atk2
+			else if (.@i < 701)    .@enchant = 4767; //Atk3
+			else if (.@i < 751)    .@enchant = 4894; //ATK_4
+			else if (.@i < 776)    .@enchant = 4895; //ATK_5
+			.@equip_card[1] = .@enchant;
+			break;
+		 case 2:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4760; //Matk1
+			else if (.@i < 601)    .@enchant = 4896; //MATK_2
+			else if (.@i < 701)    .@enchant = 4897; //MATK_3
+			else if (.@i < 751)    .@enchant = 4898; //MATK_4
+			else if (.@i < 776)    .@enchant = 4899; //MATK_5
+			.@equip_card[1] = .@enchant;
+			break;
+		 case 3:
+			mes "[Expert Enchanter Byrnes]";
+			mes "Come back after you have made up your mind!";
+			close;
+		}
+	} else if ( .@equip_card[2] == 0 ) && ( .@equip_card[1] != 0 ) {
+		mes "Please pick your bonus for the third enchant.";
+		switch(select("Max HP","Max SP","Cancel")) {
+		 case 1:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4861; //MHP1
+			else if (.@i < 601)    .@enchant = 4862; //MHP2
+			else if (.@i < 701)    .@enchant = 4867; //MHP3
+			else if (.@i < 751)    .@enchant = 4868; //MHP4
+			else if (.@i < 776)    .@enchant = 4900; //MHP_5
+			.@equip_card[2] = .@enchant;
+			break;
+		 case 2:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4870; //SP25
+			else if (.@i < 601)    .@enchant = 4800; //SP50
+			else if (.@i < 701)    .@enchant = 4871; //SP75
+			else if (.@i < 751)    .@enchant = 4801; //SP100
+			else if (.@i < 776)    .@enchant = 4802; //SP150
+			.@equip_card[2] = .@enchant;
+			break;
+		 case 3:
+			mes "[Expert Enchanter Byrnes]";
+			mes "Come back after you have made up your mind!";
+			close;
+		}
+	} else if ( .@equip_card[3] == 0 ) && ( .@equip_card[2] != 0 ) {
+		mes "Please pick your bonus for the fourth enchant.";
+		switch(select("MDEF","DEF","Cancel")) {
+		 case 1:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4890; //MDEF_1
+			else if (.@i < 601)    .@enchant = 4786; //Mdef2
+			else if (.@i < 701)    .@enchant = 4891; //MDEF_3
+			else if (.@i < 751)    .@enchant = 4787; //Mdef4
+			else if (.@i < 776)    .@enchant = 4892; //MDEF_5
+			.@equip_card[3] = .@enchant;
+			break;
+		 case 2:
+			.@i = rand(1,775);
+			if (.@i < 401)    .@enchant = 4791; //Def3
+			else if (.@i < 601)    .@enchant = 4792; //Def6
+			else if (.@i < 701)    .@enchant = 4793; //Def9
+			else if (.@i < 751)    .@enchant = 4794; //Def12
+			else if (.@i < 776)    .@enchant = 4893; //DEF_15
+			.@equip_card[3] = .@enchant;
+			break;
+		 case 3:
+			mes "[Expert Enchanter Byrnes]";
+			mes "Come back after you have made up your mind!";
+			close;
+		}
+	}
+	next;
+	mes "[Expert Enchanter Byrnes]";
+	mes "Finished!";
+	delequip .@part;
+	getitem2 .@equip_id,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
+	close;
+}
+
+moro_vol,131,103,3	script	Base Investigator#mv	4_M_KY_HEAD,{
+	if( questprogress(1264) == 1 ) {
+		if ( countitem(Burning_Feather) < 15 ) {
+			mes "[Base Investigator]";
+			mes "You don't have enough burning feathers.";
+			close;
+		}
+		mes "[Base Investigator]";
+		mes "Well done!";
+		delitem Burning_Feather,15;
+		completequest 1264;
+		setquest 1265;
+		mes "Now that I know what you are capable of, I feel confident in sending you up north.";
+		next;
+		mes "[Base Investigator]";
+		mes "Go meet our scout in the northwest and he will tell you what to do next.";
+		close;	
+	} else if( questprogress(1264) == 0) {
+		mes "[Base Investigator]";
+		mes "Hello adventurer, I've heard quite a bit about you from the others.";
+		next;
+		mes "[Base Investigator]";
+		mes "I have been told that you will be able to help us out.";
+		mes "Right now what we really need is someone to help clean up some of these monsters.";
+		next;
+		mes "[Base Investigator]";
+		mes "Can you please hunt down 15 Fire Condors and Collect their Burning Feathers.";
+		setquest 1264;
+		close;
+	} else if( questprogress(1267) == 1 ) {
+		mes "[Base Investigator]";
+		mes "Hmmmm, yeah, something is definitely controlling the monsters.";
+		mes "We need a bit more info, can you kill another 20 Fire Sandman?";
+		completequest 1267;
+		setquest 1268;
+		close;
+	} else if (questprogress(1268,HUNTING) == 2) {
+		mes "[Base Investigator]";
+		mes "Nicely done, can you take care of 20 Fire Frilldoras now?";
+		completequest 1268;
+		setquest 1269;
+		close;
+	} else if (questprogress(1269,HUNTING) == 2) {
+		mes "[Base Investigator]";
+		mes "Hmmmm this is really interesting. I can't help but feel that the Doom Prayers are connected to all of this.";
+		next;
+		mes "[Base Investigator]";
+		mes "I need you to go and talk to their leader and see if you can find any new information.";
+		close;
+	} else {
+		mes "[Base Investigator]";
+		mes "We will win this!";
+		close;
+	}
+}
+
+moro_vol,234,301,3	script	Scout#mv	4_M_CRU_SOLD,3,3,{
+	if( questprogress(1265) == 1 ) {
+		mes "[Scout]";
+		mes "They just keep coming!";
+		mes "There is no end to them.";
+		next;
+		mes "[Scout]";
+		mes "If you wish to help, hunt down these Fire Sandmen and bring me 20 Patrol Logs.";
+		next;
+		mes "[Scout]";
+		mes "Be careful, something seems off.";
+		completequest 1265;
+		setquest 1266;
+		close;
+	} else if( questprogress(1266) == 1 ) {
+		if ( countitem(Patrol_Log) < 20 ) {
+			mes "[Scout]";
+			mes "You don't have enough burning feathers.";
+			close;
+		}
+		mes "[Scout]";
+		mes "Finally! Now let me just look through these real quick.";
+		next;
+		mes "[Scout]";
+		mes "Oh no... this is bad... Head down to the Base investigator right away and tell him that the monsters are organized.";
+		next;
+		mes "[Scout]";
+		mes "These logs clearly show that something is not normal.";
+		completequest 1266;
+		setquest 1267;
+		delitem Patrol_Log,20;
+		close;
+	} else {
+		mes "[Scout]";
+		mes "This is where the real battle is!";
+		close;
+	}
+	
+	OnTouch:
+		if( questprogress(1266) == 1 ) {
+			if ( rand(5) == 1 ) {
+				delitem Patrol_Log,4;
+				getmapxy .@map$,.@x,.@y,UNITTYPE_PC;
+				areamonster .@map$,(.@x-1),(.@y-1),(.@x+1),(.@y+1),"--en--",3026,5,"Bargat Tiblack#moro_vol::OnFireSandMan";
+			}
+		}
+		end;
+}
+moro_vol,91,197,3	script	Doom Prayer Leader#mv	4_M_BELIEVER01,{
+	if (questprogress(1269,HUNTING) == 2) {
+		mes "[Doom Prayer Leader]";
+		mes "Greetings adventurer, how may I help you today?";
+		OnMenu:
+		switch(select("What are you doing here?","Who are you?","This is all fake right?","Cancel")) {
+			next;
+		 case 1:
+			mes "[Doom Prayer Leader]";
+			mes "We are the followers of the God of Destruction, he will bring an end to this world!";
+			mes "We will be his only benefactors!";
+			next;
+			mes "[Doom Prayer Leader]";
+			mes "Those who wish to challenge the true God will only suffer!";
+			next;
+			doevent "Doom Prayer Leader#mv::OnMenu";
+			end;
+		 case 2:
+			mes "[Doom Prayer Leader]";
+			mes "Ahahahhaa, as if that maters!";
+			mes "I simply wish to spread the truth!";
+			next;
+			next;
+			doevent "Doom Prayer Leader#mv::OnMenu";
+			end;
+		 case 3:
+			mes "[Doom Prayer Leader]";
+			mes "FAKE!?!";
+			mes "Why I ought to!...";
+			next;
+			mes "[Doom Prayer Leader]";
+			mes "I will show you that the Demon God has chosen to bless us, bring me 40 Stones Of Blessing and I will show you our gift.";
+			completequest 1269;
+			setquest 1270;
+			close;
+		 case 4:
+			mes "[Doom Prayer Leader]";
+			mes "Leave!";
+			close;
+		}
+	} else if ( questprogress(1270) == 1 ) {
+		if ( countitem(Stone_Of_Blessing) < 40 ) {
+			mes "[Doom Prayer Leader]";
+			mes "You don't have enough Stones Of Blessing.";
+			close;
+		}
+		mes "[Doom Prayer Leader]";
+		mes "Oh hoooo, so you got the stones.";
+		mes "Now it is time for you to witness our gift!";
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "Throw the stones at us and see what happens!";
+		next;
+		mes "-You throw the stones at the Leader and his followers-";
+		next;
+		OnNOStop:
+		mes "[Doom Prayer Leader]";
+		mes "...";
+		next;
+		mes "-Do you wish to stop throwing stones?-";
+		if (select("No, I want to see this","Yes, I've had enough") == 1) {
+			next;
+			doevent "Doom Prayer Leader#mv::OnNOStop";
+			end;
+		}
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "But.. But... why is nothing happening?";
+		completequest 1270;
+		setquest 1271;
+		delitem Stone_Of_Blessing, 40;
+		close;
+	} else if ( questprogress(1271) == 1 ) {
+		mes "[Doom Prayer Leader]";
+		mes "No... there must be some mistake!";
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "I'll prove it to you!";
+		mes "Bring me 30 Monster Blood, I'll show you something amazing.";
+		completequest 1271;
+		setquest 1272;
+		close;
+	} else if ( questprogress(1272) == 1 ) {
+		if ( countitem(Monster_Blood) < 30 ) {
+			mes "[Doom Prayer Leader]";
+			mes "You don't have enough Monster Blood.";
+			close;
+		}
+		mes "[Doom Prayer Leader]";
+		mes "Now watch this! I'm going to drink all of this monster blood and I will levitate!";
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "Oh for the love of... Oh... no... I seemed to have crapped my pants.";
+		next;
+		mes "-The Leader is busy, find the second in command-";
+		delitem Monster_Blood,30;
+		completequest 1272;
+		setquest 1273;
+		close;
+	} else if ( questprogress(1273) == 1 ) {
+		mes "-The Leader is busy, find the second in command-";
+		close;
+	} else if ( questprogress(1275) == 1 ) {
+		mes "[Doom Prayer Leader]";
+		mes "I told you were were blessed!";
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "That's why we have been hunting these monsters to gather supplies but they started getting organized.";
+		next;
+		mes "[Doom Prayer Leader]";
+		mes "But I think we will take a small break now.";
+		next;
+		completequest 1275;
+		getexp 3000000,1500000;
+		mes "[Gained 3,000,000 Base Exp]";
+		mes "[Gained 1,500,000 Job Exp]";
+		close;
+	} else {
+		mes "[Doom Prayer Leader]";
+		mes "The Demon God has chosen us!";
+		close;
+	}
+}
+
+moro_vol,95,195,3	script	Doom Prayer's 2nd Cmd	4_F_BELIEVER01,{
+	if ( questprogress(1273) == 1 ) {
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "The Leader made a small miscalculation.";
+		mes "We are blessed by the Demon God and I will prove it to you.";
+		next;
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "You have to collect 30 Golem's Fiery Stone Tooth and 30 Frilldora's Fiery Nape.";
+		mes "Then I will show you something amazing.";
+		completequest 1273;
+		setquest 1274;
+		close;
+	} else if ( questprogress(1274) == 1 ) {
+		if ( countitem(Golems_Fiery_Stone_Tooth) < 30 ) || ( countitem(Frilldoras_Fiery_Nape) < 30 ) {
+			mes "[Doom Prayer's 2nd Cmd]";
+			mes "You don't have enough Golem's Fiery Stone Tooth or Frilldora's Fiery Nape.";
+			close;
+		}
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "Alright now stand back! This is going to blow your frikin mind!";
+		next;
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "AAAAAAAAAAAAAAAAAAAAA";
+		next;
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "KAIO...K...";
+		next;
+		mes "["+strcharinfo(0)+"]";
+		mes "Kaio -wa?";
+		mes "OH MY GOD";
+		close2;
+		delitem Golems_Fiery_Stone_Tooth,30;
+		delitem Frilldoras_Fiery_Nape,30;
+		completequest 1274;
+		setquest 1275;
+		specialeffect2 90;
+		specialeffect2 96;
+		end;
+	} else if ( questprogress(1275) == 1 ) {
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "That's right... talk to the leader now.";
+		close;
+	} else {
+		mes "[Doom Prayer's 2nd Cmd]";
+		mes "The Demon God has chosen us!";
+		close;
+	}
+}
+
+moro_vol,108,88,5	script	Commander Hibba Agip#mvo	4_M_REDSWORD,{
+	if(!questprogress(7593)) {
+		mes "[Commander Hibba Agip]";
+		mes "It is time for the final battle.";
+		next;
+		mes "[Commander Hibba Agip]";
+		mes "We have discovered Morroc's final hiding spot and we are getting ready to take him on.";
+		next;
+		mes "[Commander Hibba Agip]";
+		mes "Talk to Abidal for your instructions.";
+		close;
+	}  else if(questprogress(7597)) {
+		mes "[Commander Hibba Agip]";
+		mes "Oh wow, you actually defeated Morroc.";
+		next;
+		mes "[Commander Hibba Agip]";
+		mes "Thank you so much for helping us out with this, here is a little reward.";
+		getitem Prize_of_Squad,1;
+		erasequest 7597;
+		next;
+		mes "[Commander Hibba Agip]";
+		mes "If you decide to go in there again, come talk to me.";
+		close;
+	} else {
+		mes "[Commander Hibba Agip]";
+		mes "So much work to do!";
+		close;
+	}
+}
+moro_vol,110,90,3	script	Abidal#moro_vol	4_M_SAGE_C,{
+	 if(questprogress(7594)) {
+		mes "[Abidal]";
+		mes "Oh wow, not only did you defeat Morroc, but you took care of his 2 main minions!";
+		next;
+		mes "[Abidal]";
+		mes "That is just downright amazing, here take this.";
+		getitem Prize_of_Squad,1;
+		erasequest 7594;
+		next;
+		mes "[Abidal]";
+		mes "If you decide to go in there again, come talk to me.";
+		close;
+	} if(!questprogress(7593)) {
+		mes "[Abidal]";
+		mes "Hey there "+strcharinfo(0)+", we shouldn't waste much time.";
+		next;
+		mes "[Abidal]";
+		mes "If you head into the Fire Cave you should be able to find Guardian Nidhoggr.";
+		next;
+		mes "[Abidal]";
+		mes "By talking to Nidhogrr you will be able to take part in the final battle vs Morroc.";
+		setquest 7593;
+		close;
+	} else {
+		mes "[Abidal]";
+		mes "The final battle is uppon us.!";
+		close;
+	}
+}
+
+moro_vol,0,0,0,0	monster	--en--	3039,1,0,0,"Magic Sholar#mv::OnManaKill"
+moro_vol,0,0,0,0	monster	--en--	3040,1,0,0,"Magic Sholar#mv::OnManaKill"
+moro_vol,0,0,0,0	monster	--en--	3041,1,0,0,"Magic Sholar#mv::OnManaKill"
+
+moro_vol,111,86,1	script	Instructor Ingrid#mv	4_M_CRU,{
+	if (questprogress(7582, PLAYTIME) == 2) {
+		mes "[Instructor Ingrid]";
+		mes "You may do the Eliminating Risks quest again.";
+		erasequest 7582;
+		next;
+	} else if (questprogress(7582, PLAYTIME) == 1) {
+		mes "[Instructor Ingrid]";
+		mes "Leave them to other subjugators for now. You deserve a rest.";
+		close;
+	}
+	if (questprogress(7581,HUNTING) == 2) {
+		mes "[Instructor Ingrid]";
+		mes "Ohoooo, you actually did it. That's awesome.";
+		mes "Here is a little reward.";
+		getexp 1000000,800000;
+		changequest 7581,7582;
+		mes "[Gained 1,000,000 Base Exp]";
+		mes "[Gained 800,000 Job Exp]";
+		next;
+		mes "[Instructor Ingrid]";
+		mes "Leave them to other subjugators for now. You deserve a rest.";
+		close;
+	} else if(!questprogress(7581)) {
+		mes "[Instructor Ingrid]";
+		mes "Hello adventurer. We are facing a major crisis right now.";
+		next;
+		mes "[Instructor Ingrid]";
+		mes "Three of Morocc's soldiers have made it into the fire basin, we need you to eliminate them.";
+		next;
+		mes "[Instructor Ingrid]";
+		mes "As soon as 1 is killed, another one incarnates to take its spot.";
+		next;
+		mes "[Instructor Ingrid]";
+		mes "However with the growing number of adventurers, I will only ask you to kill each of them once for today.";
+		setquest 7581;
+		close;
+	}
+}
+
+moro_vol,98,107,1	script	Magic Sholar#mv	4_M_FAIRYAVANT,{
+	if (questprogress(7584, PLAYTIME) == 2) {
+		mes "[Magic Sholar Avant]";
+		mes "You may do the Collecting Mana quest again.";
+		erasequest 7584;
+		next;
+	} else if (questprogress(7584, PLAYTIME) == 1) {
+		mes "[Magic Sholar Avant]";
+		mes "Leave the mana collecting to the subjugators for now. You deserve a rest.";
+		close;
+	}
+	if( questprogress(7583) == 1 ) {
+		if ( countitem(Mana_Crystal) < 3 ) {
+			mes "[Magic Sholar Avant]";
+			mes "You do not have enough Mana Crystals.";
+			close;
+		}
+		mes "[Magic Sholar Avant]";
+		mes "Wow, you are amazing!";
+		mes "Here is a little reward.";
+		next;
+		getexp 350000,350000;
+		changequest 7583,7584;
+		mes "[Gained 1,000,000 Base Exp]";
+		mes "[Gained 800,000 Job Exp]";
+		next;
+		mes "[Magic Sholar Avant]";
+		mes "Come back again tomorrow to help us out.";
+		close;		
+	} else if( questprogress(7453) == 2 ) {
+		mes "[Magic Sholar Avant]";
+		mes "Everyone here is really busy, but those champion monsters are too much for most of our warriors.";
+		next;
+		mes "[Magic Sholar Avant]";
+		mes "That is a serious problem because we need to get the Mana Crystals in order to make our magic stronger.";
+		next;
+		mes "[Magic Sholar Avant]";
+		mes "If it isn't too much trouble, can you hunt some of them down and collect 3 Mana Crystals?";
+		setquest 7583;
+		close;
+	} else {
+		mes "[Magic Sholar Avant]";
+		mes "We need to think of a way to gain an advantage!";
+		close;
+	}
+	
+OnManaKill:
+	if( questprogress(7583) == 1 ) {
+		getitem Mana_Crystal,1;
+	}
+	end;
+	
+}
